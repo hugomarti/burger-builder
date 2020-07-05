@@ -18,7 +18,14 @@ const INGREDIENT_PRICES = {
 };
 
 class BurgerBuilder extends Component {
-  state = {};
+  state = {
+    ingredients: null,
+    totalPrice: 4,
+    purchasable: false,
+    purchasing: false,
+    loading: false,
+    error: false,
+  };
 
   componentDidMount() {
     axios
